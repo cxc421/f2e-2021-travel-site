@@ -1,0 +1,52 @@
+.header {
+  position: relative;
+  height: 104px;
+  background-color: #fff;
+}
+
+.logo {
+  position: absolute;
+  left: 108px;
+  top: 29px;
+  height: 57px;
+}
+.logo img {
+  height: 100%;
+}
+
+.navbar {
+  position: absolute;
+  right: 108px;
+  bottom: 18px;
+}
+.navbar ul {
+  list-style: none;
+  margin: 0;
+  display: flex;
+}
+.navbar li + li {
+  margin-left: 27px;
+}
+.navbar li a {
+  display: flex;
+  align-items: flex-end;
+}
+.navbar li a img {
+  height: 34px;
+}
+.navbar li a span {
+  margin-left: 8px;
+  margin-bottom: 4px;
+  font-size: 14px;
+  line-height: 20px;
+  font-family: "Noto Sans TC";
+}
+.greenAnchor {
+  color: green;
+}
+.yellowAnchor {
+  color: #ffb72c;
+}
+.redAnchor {
+  color: red;
+}
