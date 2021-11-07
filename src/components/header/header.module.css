@@ -1,7 +1,49 @@
-.header {
+.placeHolder {
   position: relative;
   height: 104px;
+  background: green;
+}
+
+.header {
+  position: fixed;
+  height: 104px;
+  width: 100%;
+  top: 0;
+  z-index: 2;
+}
+
+.headerContent,
+.headerContentSmall {
+  z-index: 1;
+  position: relative;
+  width: 100%;
+  height: 100%;
   background-color: #fff;
+}
+
+.headerContentSmall {
+  display: none;
+}
+
+@media screen and (max-width: 768px) {
+  .placeHolder,
+  .header {
+    height: 84px;
+  }
+}
+
+@media screen and (max-width: 576px) {
+  .placeHolder,
+  .header {
+    height: 191px;
+  }
+
+  .headerContent {
+    display: none;
+  }
+  .headerContentSmall {
+    display: block;
+  }
 }
 
 .logo {
@@ -10,6 +52,15 @@
   top: 29px;
   height: 57px;
 }
+
+@media screen and (max-width: 768px) {
+  .logo {
+    height: 50px;
+    left: 40px;
+    top: 17px;
+  }
+}
+
 .logo img {
   height: 100%;
 }
@@ -19,6 +70,14 @@
   right: 108px;
   bottom: 18px;
 }
+
+@media screen and (max-width: 768px) {
+  .navbar {
+    right: 16px;
+    bottom: 17px;
+  }
+}
+
 .navbar ul {
   list-style: none;
   margin: 0;
@@ -34,6 +93,12 @@
 .navbar li a img {
   height: 34px;
 }
+
+.navbar li a img:hover {
+  transform: scale(1.2353);
+  transform-origin: center bottom;
+}
+
 .navbar li a span {
   margin-left: 8px;
   margin-bottom: 4px;
@@ -41,12 +106,46 @@
   line-height: 20px;
   font-family: "Noto Sans TC";
 }
-.greenAnchor {
+.greenText {
   color: green;
 }
-.yellowAnchor {
+.yellowText {
   color: #ffb72c;
 }
-.redAnchor {
+.redText {
   color: red;
+}
+
+.cardShadow {
+  display: none;
+}
+
+@media screen and (max-width: 768px) {
+  .cardShadow {
+    display: block;
+    position: fixed;
+    z-index: 0;
+    /* top: 49 - 11 = 38px */
+    top: 38px;
+    /* left: 16 - 11 = 5px */
+    left: 5px;
+    width: calc(100% - 10px);
+    /* fixed: 74px */
+    height: 74px;
+  }
+}
+
+@media screen and (max-width: 576px) {
+  .cardShadow {
+    display: block;
+    position: fixed;
+    z-index: 0;
+    /* top: 168 - 11 = 157px */
+    top: 157px;
+    /* left: 16 - 11 = 5px */
+    left: 5px;
+    width: calc(100% - 10px);
+    /* height: 37 + 11 + 11 = 59 */
+    height: 59px;
+  }
 }
