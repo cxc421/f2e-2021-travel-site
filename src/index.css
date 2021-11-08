@@ -1,3 +1,25 @@
+/**
+Noto Sans
+*/
+@font-face {
+  font-family: "Noto Sans TC";
+  font-style: normal;
+  font-weight: 300;
+  src: url(./assets/Noto_Sans_TC/NotoSansTC-Light.otf) format("opentype");
+}
+/* @font-face {
+  font-family: "Noto Sans TC";
+  font-style: normal;
+  font-weight: 400;
+  src: url(./assets/Noto_Sans_TC/NotoSansTC-Regular.otf) format("opentype");
+} */
+/* @font-face {
+  font-family: "Noto Sans TC";
+  font-style: normal;
+  font-weight: 500;
+  src: url(./assets/Noto_Sans_TC/NotoSansTC-Medium.otf) format("opentype");
+} */
+
 *,
 *::after,
 *::before {
@@ -12,26 +34,5 @@ html {
 
 body {
   background-color: #f6f7fb;
+  font-family: "Noto Sans TC";
 }
-
-/**
-Noto Sans
-*/
-/* @font-face {
-  font-family: "Noto Sans TC";
-  font-style: normal;
-  font-weight: 300;
-  src: url(./assets/Noto_Sans_TC/NotoSansTC-Light.otf) format("opentype");
-} */
-@font-face {
-  font-family: "Noto Sans TC";
-  font-style: normal;
-  font-weight: 400;
-  src: url(./assets/Noto_Sans_TC/NotoSansTC-Regular.otf) format("opentype");
-}
-/* @font-face {
-  font-family: "Noto Sans TC";
-  font-style: normal;
-  font-weight: 500;
-  src: url(./assets/Noto_Sans_TC/NotoSansTC-Medium.otf) format("opentype");
-} */

@@ -12,7 +12,7 @@ function App() {
           zIndex: 1,
         }}
       >
-        <h1 style={{ color: "black", margin: 0 }}>Test</h1>
+        <button style={{ margin: 5, fontSize: 16 }}>Test</button>
       </main>
     </>
   );

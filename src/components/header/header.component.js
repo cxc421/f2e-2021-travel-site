@@ -3,6 +3,7 @@ import greenCircleSrc from "./images/green-circle-circle.png";
 import yellowCircleSrc from "./images/yellow-rectangle-circle.png";
 import redCircleSrc from "./images/red-triangle-circle.png";
 import cardShadowSrc from "./images/card-shadow.png";
+import searchIconSrc from "./images/search.png";
 import styles from "./header.module.css";
 
 function Header() {
@@ -37,7 +38,30 @@ function Header() {
             </ul>
           </nav>
         </div>
-        <div className={styles.headerContentSmall}></div>
+        <div className={styles.headerContentSmall}>
+          <a className={styles.logoSmall} href="/">
+            <img src={logoSrc} alt="logo" />
+          </a>
+          <a className={styles.searchIconSmall} href="/search">
+            <img src={searchIconSrc} alt="to search page" />
+          </a>
+          <nav className={styles.navbarSmall}>
+            <ul>
+              <li>
+                <a className={styles.selected} href="/activity">
+                  景點活動
+                </a>
+              </li>
+              <li>
+                <a href="/location">美食住宿</a>
+              </li>
+              <li>
+                <a href="/comminication">景點交通</a>
+              </li>
+            </ul>
+          </nav>
+          <div className={styles.filterAreaSmall}></div>
+        </div>
       </header>
       <img
         src={cardShadowSrc}
