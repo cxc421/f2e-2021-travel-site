@@ -35,35 +35,49 @@ function useShowList(ref) {
 
 function SelectBox({ textWidth, value, onChange, children }) {
   const ref = React.useRef(null);
-  const [selectText, setSelectText] = React.useState("");
   const [showList, setShowList] = useShowList(ref);
+  const selectText = React.Children.toArray(children).find(
+    (child) => child.props.value === value
+  )?.props.children;
   const contextValue = {
+    value,
     textWidth,
+    showList,
+    handleOptionMouseDown(optionValue) {
+      setShowList((show) => !show);
+      if (optionValue !== value) {
+        onChange(optionValue);
+      }
+    },
   };
 
-  // return (
-  //   <SelectContent.Provider value={{ selectValue: value, setSelectText }}>
-  //     <div ref={ref} className={styles.wrapper}>
-  //       {children}
-  //     </div>
-  //   </SelectContent.Provider>
-  // );
-  if (!showList) {
-    return (
-      <div ref={ref} className={styles.wrapper}>
-        <SelectOption value={1}>類別1</SelectOption>
-        <SelectOption value={2}>類別2</SelectOption>
-        <SelectOption value={3}>類別3</SelectOption>
-      </div>
-    );
-  }
-  return null;
+  return (
+    <div ref={ref} className={styles.wrapper}>
+      <SelectContent.Provider value={contextValue}>
+        {!showList ? (
+          <SelectOption value={value}>{selectText}</SelectOption>
+        ) : (
+          children
+        )}
+      </SelectContent.Provider>
+    </div>
+  );
 }
 
-function SelectOption({ value, children }) {
+function SelectOption({ value: optionValue, children }) {
+  const { value, textWidth, showList, handleOptionMouseDown } =
+    useSelectContent();
+  const optionCalssName = [styles.option, showList ? styles.inList : undefined]
+    .filter((className) => typeof className === "string")
+    .join(" ");
+
   return (
-    <div className={styles.option} data-selected={value === 2}>
-      <div className={styles.optionText}>
+    <div
+      className={optionCalssName}
+      data-selected={value === optionValue}
+      onMouseDown={() => handleOptionMouseDown(optionValue)}
+    >
+      <div style={{ width: textWidth }} className={styles.optionText}>
         {children.split("").map((letter, i) => (
           <span key={i}>{letter}</span>
         ))}

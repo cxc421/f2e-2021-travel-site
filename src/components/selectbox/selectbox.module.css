@@ -16,11 +16,11 @@
   cursor: pointer;
 }
 
-.option[data-selected="true"] {
+.option.inList[data-selected="true"] {
   background: #ccc;
 }
 
-.option:not([data-selected="true"]):hover {
+.option:not(.inList[data-selected="true"]):hover {
   background: #ddd;
 }
 
