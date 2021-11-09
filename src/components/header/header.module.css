@@ -22,7 +22,6 @@
 }
 
 .headerContentSmall {
-  overflow: auto;
   padding: 0 16px;
   display: none;
 }
@@ -44,7 +43,7 @@
     display: none;
   }
   .headerContentSmall {
-    display: block;
+    display: flow-root;
   }
 }
 
@@ -208,5 +207,19 @@
   margin-top: 12px;
   position: relative;
   height: 40px;
-  background-color: #eee;
+  display: flex;
+}
+
+.filterAreaSmall > * + * {
+  margin-left: 8px;
+}
+
+.filterAreaSmall > div {
+  /* background-color: #eee; */
+  flex: 1;
+}
+
+.gpsIconSmall {
+  width: 40px;
+  height: 40px;
 }

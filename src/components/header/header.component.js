@@ -1,10 +1,30 @@
+import { useState } from "react";
+import { SelectBox, SelectOption } from "../selectbox/selectbox.component";
+
 import logoSrc from "./images/logo.png";
 import greenCircleSrc from "./images/green-circle-circle.png";
 import yellowCircleSrc from "./images/yellow-rectangle-circle.png";
 import redCircleSrc from "./images/red-triangle-circle.png";
 import cardShadowSrc from "./images/card-shadow.png";
 import searchIconSrc from "./images/search.png";
+import gpsIconSrc from "./images/gps.png";
 import styles from "./header.module.css";
+
+function CategorySelectBox() {
+  const [value, setValue] = useState(1);
+
+  return (
+    <SelectBox
+      textWidth={61}
+      value={value}
+      onChange={(newValue) => setValue(newValue)}
+    >
+      <SelectOption value={1}>類別</SelectOption>
+      <SelectOption value={2}>景點</SelectOption>
+      <SelectOption value={3}>活動</SelectOption>
+    </SelectBox>
+  );
+}
 
 function Header() {
   return (
@@ -60,7 +80,15 @@ function Header() {
               </li>
             </ul>
           </nav>
-          <div className={styles.filterAreaSmall}></div>
+          <div className={styles.filterAreaSmall}>
+            <div>
+              <CategorySelectBox />
+            </div>
+            <div></div>
+            <a className={styles.gpsIconSmall} href="/gps">
+              <img src={gpsIconSrc} alt="use gps location" />
+            </a>
+          </div>
         </div>
       </header>
       <img
