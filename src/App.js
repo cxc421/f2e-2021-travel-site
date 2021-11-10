@@ -1,8 +1,10 @@
 import { Header } from "./components/header/header.component";
+import { Banner } from "./components/banner/banner.component";
 function App() {
   return (
     <>
       <Header />
+      <Banner />
       <main
         style={{
           width: "100%",

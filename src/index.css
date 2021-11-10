@@ -38,3 +38,7 @@ body {
   background-color: #f6f7fb;
   font-family: "Noto Sans TC";
 }
+
+p {
+  margin: 0;
+}

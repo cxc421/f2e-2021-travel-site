@@ -1,0 +1,45 @@
+.wrapper {
+  position: relative;
+}
+
+@media screen and (max-width: 768px) {
+  .wrapper {
+    display: none;
+  }
+}
+
+.shadow {
+  position: absolute;
+  z-index: -1;
+  width: 100%;
+  height: 74px;
+
+  /* top: 509 - 11 = 38px */
+  top: 498px;
+
+  left: 0;
+}
+
+.content {
+  position: relative;
+  background-color: white;
+  height: 536px;
+  padding: 23px 27px;
+}
+
+.content > div {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  background-color: black;
+}
+
+.content p {
+  position: absolute;
+  top: 160px;
+  left: 50%;
+  height: 197px;
+  width: 492px;
+  margin-left: -246px;
+  background-color: palevioletred;
+}
