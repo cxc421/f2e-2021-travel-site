@@ -4,6 +4,7 @@
   box-shadow: 0px 2px 4px rgba(13, 11, 12, 0.2);
   border-radius: 6px;
   overflow: auto;
+  max-height: 78vh;
 }
 
 .option {
@@ -17,14 +18,20 @@
 }
 
 .option.inList[data-selected="true"] {
-  background: #ccc;
+  background: #ff1d6c;
+  color: white;
+  cursor: default;
 }
 
-.option:not(.inList[data-selected="true"]):hover {
+.option.inList:not([data-selected="true"]):hover {
   background: #ddd;
 }
 
-.option:not(:first-child) > img {
+/* .option:not(:first-child) > img {
+  display: none;
+} */
+
+.option.inList > img {
   display: none;
 }
 

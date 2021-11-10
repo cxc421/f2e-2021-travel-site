@@ -33,12 +33,35 @@ function useShowList(ref) {
   return [showList, setShowList];
 }
 
+function useMaxHeight(ref, showList) {
+  const [maxHeight, setMaxHeight] = React.useState("none");
+
+  React.useEffect(() => {
+    if (showList) {
+      if (ref && ref.current) {
+        const { top } = ref.current.getBoundingClientRect();
+        const viewHight = document.body.clientHeight;
+        const optionHeight = 40;
+        const maxHeight =
+          Math.floor((viewHight - top) / optionHeight) * optionHeight;
+        setMaxHeight(maxHeight);
+      }
+    } else {
+      setMaxHeight("none");
+    }
+  }, [ref, showList]);
+
+  return maxHeight;
+}
+
 function SelectBox({ textWidth, value, onChange, children }) {
   const ref = React.useRef(null);
   const [showList, setShowList] = useShowList(ref);
-  const selectText = React.Children.toArray(children).find(
-    (child) => child.props.value === value
-  )?.props.children;
+  const maxHeight = useMaxHeight(ref, showList);
+  const selectText =
+    React.Children.toArray(children).find(
+      (child) => child.props.value === value
+    )?.props.children || "";
   const contextValue = {
     value,
     textWidth,
@@ -52,7 +75,7 @@ function SelectBox({ textWidth, value, onChange, children }) {
   };
 
   return (
-    <div ref={ref} className={styles.wrapper}>
+    <div ref={ref} className={styles.wrapper} style={{ maxHeight }}>
       <SelectContent.Provider value={contextValue}>
         {!showList ? (
           <SelectOption value={value}>{selectText}</SelectOption>
