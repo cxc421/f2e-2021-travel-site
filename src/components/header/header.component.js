@@ -1,12 +1,12 @@
 import { useState } from "react";
 import { SelectBox, SelectOption } from "../selectbox/selectbox.component";
+import { SearchImg } from "../search-icon/search-icon.component";
 
 import logoSrc from "./images/logo.png";
 import greenCircleSrc from "./images/green-circle-circle.png";
 import yellowCircleSrc from "./images/yellow-rectangle-circle.png";
 import redCircleSrc from "./images/red-triangle-circle.png";
 import cardShadowSrc from "./images/card-shadow.png";
-import searchIconSrc from "./images/search.png";
 import gpsIconSrc from "./images/gps.png";
 import styles from "./header.module.css";
 
@@ -106,7 +106,7 @@ function Header() {
             <img src={logoSrc} alt="logo" />
           </a>
           <a className={styles.searchIconSmall} href="/search">
-            <img src={searchIconSrc} alt="to search page" />
+            <SearchImg />
           </a>
           <nav className={styles.navbarSmall}>
             <ul>
