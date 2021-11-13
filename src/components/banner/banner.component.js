@@ -13,34 +13,34 @@ function Banner() {
     <div className={styles.wrapper}>
       <div className={styles.content}>
         <div
+          className={styles.bannerBackground}
           style={{
             backgroundImage: `url(${bannerOneSrc})`,
             backgroundSize: "cover",
             backgroundPosition: "center center",
           }}
-        >
-          <div className={styles.centerBlock}>
-            <img
-              className={styles.welcomIcon}
-              src={welcomeSrc}
-              alt="welcome to taiwan"
-            />
-            <div className={styles.slogan}>
-              台北、台中、台南、屏東、宜蘭……遊遍台灣
+        ></div>
+        <div className={styles.centerBlock}>
+          <img
+            className={styles.welcomIcon}
+            src={welcomeSrc}
+            alt="welcome to taiwan"
+          />
+          <div className={styles.slogan}>
+            台北、台中、台南、屏東、宜蘭……遊遍台灣
+          </div>
+          <div className={styles.searchRow}>
+            <input type="search" placeholder="搜尋關鍵字" />
+            <SearchImg className={styles.searchIcon} />
+          </div>
+          <div className={styles.filterRow}>
+            <div>
+              <CategorySelectBox />
             </div>
-            <div className={styles.searchRow}>
-              <input type="search" placeholder="搜尋關鍵字" />
-              <SearchImg className={styles.searchIcon} />
+            <div>
+              <CitySelectBox />
             </div>
-            <div className={styles.filterRow}>
-              <div>
-                <CategorySelectBox />
-              </div>
-              <div>
-                <CitySelectBox />
-              </div>
-              <GpsImage className={styles.gpsIcon} />
-            </div>
+            <GpsImage className={styles.gpsIcon} />
           </div>
         </div>
       </div>
