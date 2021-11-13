@@ -1,0 +1,44 @@
+.container {
+  margin: 0 auto;
+  max-width: 1280px;
+  /* background-color: #f6f7fb; */
+  padding: 90px 108px;
+}
+
+.sectionTitle {
+  display: flex;
+  align-items: center;
+  margin-bottom: 12px;
+}
+
+.sectionTitle img {
+  margin-right: 14px;
+}
+
+.sectionTitle span {
+  font-size: 20px;
+  line-height: 29px;
+}
+
+.testContent {
+  height: 245px;
+  width: 1600px;
+  background-color: #000;
+  display: flex;
+  justify-content: space-between;
+}
+.testContent::before {
+  display: block;
+  content: "";
+  width: 100px;
+  height: 100%;
+  background-color: blue;
+}
+
+.testContent::after {
+  display: block;
+  content: "";
+  width: 100px;
+  height: 100%;
+  background-color: red;
+}
