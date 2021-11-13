@@ -1,5 +1,5 @@
 import React from "react";
-import styles from "./selectbox.module.css";
+import styles from "./Selectbox.module.css";
 import downIconSrc from "./images/dropdown.png";
 
 const SelectContent = React.createContext();
@@ -42,8 +42,11 @@ function useMaxHeight(ref, showList) {
         const { top } = ref.current.getBoundingClientRect();
         const viewHight = document.body.clientHeight;
         const optionHeight = 40;
-        const maxHeight =
-          Math.floor((viewHight - top) / optionHeight) * optionHeight;
+        const maxDisplayOptionNum = Math.max(
+          2,
+          Math.floor((viewHight - top) / optionHeight) - 1
+        );
+        const maxHeight = maxDisplayOptionNum * optionHeight;
         setMaxHeight(maxHeight);
       }
     } else {
@@ -78,7 +81,15 @@ function SelectBox({ textWidth, value, onChange, children }) {
     <div ref={ref} className={styles.wrapper} style={{ maxHeight }}>
       <SelectContent.Provider value={contextValue}>
         {!showList ? (
-          <SelectOption value={value}>{selectText}</SelectOption>
+          <>
+            <SelectOption value={value}>{selectText}</SelectOption>
+            <img
+              className={styles.dropdownIcon}
+              src={downIconSrc}
+              alt="drop down"
+              onMouseDown={() => setShowList(true)}
+            />
+          </>
         ) : (
           children
         )}
@@ -105,7 +116,6 @@ function SelectOption({ value: optionValue, children }) {
           <span key={i}>{letter}</span>
         ))}
       </div>
-      <img src={downIconSrc} alt="drop down" />
     </div>
   );
 }

@@ -5,6 +5,14 @@
   border-radius: 6px;
   overflow: auto;
   max-height: 78vh;
+  z-index: 5;
+}
+
+.dropdownIcon {
+  position: absolute;
+  top: 8px;
+  right: 3px;
+  cursor: pointer;
 }
 
 .option {
@@ -25,14 +33,6 @@
 
 .option.inList:not([data-selected="true"]):hover {
   background: #ddd;
-}
-
-/* .option:not(:first-child) > img {
-  display: none;
-} */
-
-.option.inList > img {
-  display: none;
 }
 
 .optionText {

@@ -1,6 +1,9 @@
-import { SearchImg } from "../search-icon/search-icon.component";
+import { SearchImg } from "../SearchIcon/SearchIcon.component";
+import { GpsImage } from "../GpsIcon/GpsIcon.component";
+import { CategorySelectBox } from "../CategorySelectbox/CategorySelectbox.component";
+import { CitySelectBox } from "../CitySelectbox/CitySelectbox.component";
 
-import styles from "./banner.module.css";
+import styles from "./Banner.module.css";
 import shadowSrc from "./images/card-shadow.png";
 import bannerOneSrc from "./images/banner-1.png";
 import welcomeSrc from "./images/welcome.png";
@@ -27,9 +30,17 @@ function Banner() {
             </div>
             <div className={styles.searchRow}>
               <input type="search" placeholder="搜尋關鍵字" />
-              <SearchImg />
+              <SearchImg className={styles.searchIcon} />
             </div>
-            <div className={styles.filterRow}></div>
+            <div className={styles.filterRow}>
+              <div>
+                <CategorySelectBox />
+              </div>
+              <div>
+                <CitySelectBox />
+              </div>
+              <GpsImage className={styles.gpsIcon} />
+            </div>
           </div>
         </div>
       </div>
