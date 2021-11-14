@@ -110,13 +110,13 @@ function Main() {
       <section id="hot-activity">
         <SectionTitle>熱門活動</SectionTitle>
         <SectionContent
-          style={{ height: 200, backgroundColor: "black" }}
+          style={{ height: 500, backgroundColor: "pink" }}
         ></SectionContent>
       </section>
       <section id="hot-foods">
         <SectionTitle>熱門餐飲</SectionTitle>
         <SectionContent
-          style={{ height: 200, backgroundColor: "black" }}
+          style={{ height: 500, backgroundColor: "pink" }}
         ></SectionContent>
       </section>
     </div>

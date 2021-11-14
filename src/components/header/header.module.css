@@ -125,7 +125,7 @@
   .cardShadow {
     display: block;
     position: fixed;
-    z-index: 0;
+    z-index: 5;
     /* top: 49 - 11 = 38px */
     top: 38px;
     /* left: 16 - 11 = 5px */
@@ -138,14 +138,9 @@
 
 @media screen and (max-width: 576px) {
   .cardShadow {
-    display: block;
-    position: fixed;
-    z-index: 0;
     /* top: 168 - 11 = 157px */
     top: 157px;
-    /* left: 16 - 11 = 5px */
-    left: 5px;
-    width: calc(100% - 10px);
+
     /* height: 37 + 11 + 11 = 59 */
     height: 59px;
   }
