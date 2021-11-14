@@ -1,0 +1,39 @@
+{
+  "files": {
+    "main.css": "/travel-site/static/css/main.d8d03029.chunk.css",
+    "main.js": "/travel-site/static/js/main.8c3e4f27.chunk.js",
+    "main.js.map": "/travel-site/static/js/main.8c3e4f27.chunk.js.map",
+    "runtime-main.js": "/travel-site/static/js/runtime-main.0756b2ba.js",
+    "runtime-main.js.map": "/travel-site/static/js/runtime-main.0756b2ba.js.map",
+    "static/js/2.e753f7f5.chunk.js": "/travel-site/static/js/2.e753f7f5.chunk.js",
+    "static/js/2.e753f7f5.chunk.js.map": "/travel-site/static/js/2.e753f7f5.chunk.js.map",
+    "index.html": "/travel-site/index.html",
+    "static/css/main.d8d03029.chunk.css.map": "/travel-site/static/css/main.d8d03029.chunk.css.map",
+    "static/js/2.e753f7f5.chunk.js.LICENSE.txt": "/travel-site/static/js/2.e753f7f5.chunk.js.LICENSE.txt",
+    "static/media/index.css": "/travel-site/static/media/NotoSansTC-Light.07e462e8.otf",
+    "static/media/banner-1.43238c15.png": "/travel-site/static/media/banner-1.43238c15.png",
+    "static/media/card-shadow.84054623.png": "/travel-site/static/media/card-shadow.84054623.png",
+    "static/media/card-shadow.d55fa8c3.png": "/travel-site/static/media/card-shadow.d55fa8c3.png",
+    "static/media/chiayi.63c19d26.png": "/travel-site/static/media/chiayi.63c19d26.png",
+    "static/media/hsinchu.3ec1db6f.png": "/travel-site/static/media/hsinchu.3ec1db6f.png",
+    "static/media/hualien.a8b3310c.png": "/travel-site/static/media/hualien.a8b3310c.png",
+    "static/media/kaohsiung.251fada9.png": "/travel-site/static/media/kaohsiung.251fada9.png",
+    "static/media/nantou.711097ec.png": "/travel-site/static/media/nantou.711097ec.png",
+    "static/media/new-taipei.ccdf4d8f.png": "/travel-site/static/media/new-taipei.ccdf4d8f.png",
+    "static/media/pingtung.4dc00d19.png": "/travel-site/static/media/pingtung.4dc00d19.png",
+    "static/media/taichung.bde0350c.png": "/travel-site/static/media/taichung.bde0350c.png",
+    "static/media/tainan.69037fe6.png": "/travel-site/static/media/tainan.69037fe6.png",
+    "static/media/taipei.d238f2e8.png": "/travel-site/static/media/taipei.d238f2e8.png",
+    "static/media/taitung.45c79e29.png": "/travel-site/static/media/taitung.45c79e29.png",
+    "static/media/taoyuan.b85e1b99.png": "/travel-site/static/media/taoyuan.b85e1b99.png",
+    "static/media/tpkm.aece09d2.png": "/travel-site/static/media/tpkm.aece09d2.png",
+    "static/media/welcome.52a6c231.png": "/travel-site/static/media/welcome.52a6c231.png",
+    "static/media/yilan.a4909284.png": "/travel-site/static/media/yilan.a4909284.png"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.0756b2ba.js",
+    "static/js/2.e753f7f5.chunk.js",
+    "static/css/main.d8d03029.chunk.css",
+    "static/js/main.8c3e4f27.chunk.js"
+  ]
+}
