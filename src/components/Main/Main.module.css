@@ -2,7 +2,7 @@
   margin: 0 auto;
   max-width: 1280px;
   /* background-color: #f6f7fb; */
-  padding: 90px 108px;
+  padding: 90px 108px 0 90px;
 }
 
 @media screen and (max-width: 768px) {
@@ -14,6 +14,26 @@
 @media screen and (max-width: 576px) {
   .container {
     padding-top: 43px;
+  }
+}
+
+.container section + section {
+  margin-top: 60px;
+}
+
+@media screen and (max-width: 768px) {
+  .container section:first-child {
+    height: 225px;
+  }
+
+  .container section + section {
+    margin-top: 46px;
+  }
+}
+
+@media screen and (max-width: 576px) {
+  .container section + section {
+    margin-top: 40px;
   }
 }
 
@@ -43,11 +63,19 @@
     font-size: 14px;
     line-height: 21px;
   }
+  .sectionContent {
+    width: calc(100% - 130px);
+    margin-left: 65px;
+  }
 }
 
 @media screen and (max-width: 576px) {
   .sectionTitle {
     padding-left: 26px;
+  }
+  .sectionContent {
+    width: calc(100% - 52px);
+    margin-left: 26px;
   }
 }
 

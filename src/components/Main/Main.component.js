@@ -27,6 +27,17 @@ function SectionTitle({ children }) {
   );
 }
 
+function SectionContent({ children, className, ...props }) {
+  const finalClassName = className
+    ? `${styles.sectionContent} ${className}`
+    : styles.sectionContent;
+  return (
+    <div className={finalClassName} {...props}>
+      {children}
+    </div>
+  );
+}
+
 function HotCityCard({ bgUrl, children }) {
   const textStyle =
     children.length === 2 ? { letterSpacing: 10, marginRight: -5 } : undefined;
@@ -55,7 +66,7 @@ function HotCityCard({ bgUrl, children }) {
 function Main() {
   return (
     <div className={styles.container}>
-      <section>
+      <section id="hot-city">
         <SectionTitle>熱門城市</SectionTitle>
         <HorizontalScroll>
           <div className={styles.hotCityArea}>
@@ -95,6 +106,18 @@ function Main() {
             </div>
           </div>
         </HorizontalScroll>
+      </section>
+      <section id="hot-activity">
+        <SectionTitle>熱門活動</SectionTitle>
+        <SectionContent
+          style={{ height: 200, backgroundColor: "black" }}
+        ></SectionContent>
+      </section>
+      <section id="hot-foods">
+        <SectionTitle>熱門餐飲</SectionTitle>
+        <SectionContent
+          style={{ height: 200, backgroundColor: "black" }}
+        ></SectionContent>
       </section>
     </div>
   );
