@@ -1,5 +1,6 @@
 {
   "name": "travel-site",
+  "homepage": "http://cxc421.github.io/travel-site",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
