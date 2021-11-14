@@ -5,6 +5,18 @@
   padding: 90px 108px;
 }
 
+@media screen and (max-width: 768px) {
+  .container {
+    padding: 0;
+  }
+}
+
+@media screen and (max-width: 576px) {
+  .container {
+    padding-top: 43px;
+  }
+}
+
 .sectionTitle {
   display: flex;
   align-items: center;
@@ -18,6 +30,25 @@
 .sectionTitle span {
   font-size: 20px;
   line-height: 29px;
+}
+
+@media screen and (max-width: 768px) {
+  .sectionTitle {
+    padding-left: 65px;
+  }
+  .sectionTitle img {
+    margin-right: 7px;
+  }
+  .sectionTitle span {
+    font-size: 14px;
+    line-height: 21px;
+  }
+}
+
+@media screen and (max-width: 576px) {
+  .sectionTitle {
+    padding-left: 26px;
+  }
 }
 
 .testContent {

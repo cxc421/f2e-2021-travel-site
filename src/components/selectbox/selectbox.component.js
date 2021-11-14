@@ -34,7 +34,7 @@ function useShowList(ref) {
 }
 
 function useMaxHeight(ref, showList) {
-  const [maxHeight, setMaxHeight] = React.useState("none");
+  const [maxHeight, setMaxHeight] = React.useState(40);
 
   React.useEffect(() => {
     if (showList) {
@@ -50,7 +50,7 @@ function useMaxHeight(ref, showList) {
         setMaxHeight(maxHeight);
       }
     } else {
-      setMaxHeight("none");
+      setMaxHeight(40);
     }
   }, [ref, showList]);
 

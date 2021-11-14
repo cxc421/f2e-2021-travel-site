@@ -2,6 +2,14 @@
   position: relative;
 }
 
+@media screen and (max-width: 768px) {
+  .container {
+    position: absolute;
+    left: 0;
+    width: 100vw;
+  }
+}
+
 .wrapper {
   display: block;
   overflow: hidden;
@@ -16,12 +24,12 @@
   display: none;
 }
 
-.rightButton {
+.rightButton,
+.leftButton {
   position: absolute;
   width: 32px;
   height: 32px;
   background-color: black;
-  right: -53px;
   top: 50%;
   margin-top: -16px;
   border-radius: 6px;
@@ -29,4 +37,21 @@
   cursor: pointer;
   text-align: center;
   line-height: 26px;
+}
+
+.rightButton {
+  background-color: black;
+  right: -53px;
+}
+
+.leftButton {
+  background-color: white;
+  left: -53px;
+}
+
+@media screen and (max-width: 768px) {
+  .rightButton,
+  .leftButton {
+    display: none;
+  }
 }
