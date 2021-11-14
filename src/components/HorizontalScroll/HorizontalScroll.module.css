@@ -13,9 +13,17 @@
 .wrapper {
   display: block;
   overflow: hidden;
+  height: 245px;
+}
+
+@media screen and (max-width: 768px) {
+  .wrapper {
+    height: 196px;
+  }
 }
 
 .content {
+  height: 100%;
   overflow-x: scroll;
   -ms-overflow-style: none;
   scrollbar-width: none;

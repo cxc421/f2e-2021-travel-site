@@ -1,11 +1,20 @@
 import { useRef, useState } from "react";
+import isMobileCheck from "is-mobile";
+
 import styles from "./HorizontalScroll.module.css";
 import rightTriangleSrc from "./images/right-triangle.png";
 import leftTriangleSrc from "./images/left-triangle.png";
 
+const isDesktop = !isMobileCheck();
+
 function HorizontalScroll({ children }) {
   const ref = useRef(null);
   const [position, setPosition] = useState("left");
+  const [isDragMode, setIsDragMode] = useState(false);
+  const [mouseDownInfo, setMouseDownInfo] = useState({
+    pageX: 0,
+    scrollLeft: 0,
+  });
 
   const toRight = () => {
     if (ref && ref.current) {
@@ -41,9 +50,38 @@ function HorizontalScroll({ children }) {
     }
   };
 
+  const handleContaineMouseMove = (e) => {
+    if (isDesktop && isDragMode) {
+      const xDiff = e.pageX - mouseDownInfo.pageX;
+      ref.current.scrollLeft = mouseDownInfo.scrollLeft - xDiff;
+    }
+  };
+
+  const enableDragMode = (e) => {
+    if (isDesktop) {
+      setMouseDownInfo({
+        pageX: e.pageX,
+        scrollLeft: ref.current.scrollLeft,
+      });
+      setIsDragMode(true);
+    }
+  };
+
+  const disableDragMode = () => {
+    if (isDesktop) {
+      setIsDragMode(false);
+    }
+  };
+
   return (
-    <div className={styles.container}>
-      <div className={styles.wrapper} style={{ height: 245 }}>
+    <div
+      className={styles.container}
+      onMouseDown={enableDragMode}
+      onMouseMove={handleContaineMouseMove}
+      onMouseLeave={disableDragMode}
+      onMouseUp={disableDragMode}
+    >
+      <div className={styles.wrapper}>
         <div ref={ref} className={styles.content} onScroll={onScroll}>
           {children}
         </div>
