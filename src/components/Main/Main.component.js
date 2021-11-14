@@ -107,18 +107,18 @@ function Main() {
           </div>
         </HorizontalScroll>
       </section>
-      <section id="hot-activity">
+      {/* <section id="hot-activity">
         <SectionTitle>熱門活動</SectionTitle>
         <SectionContent
-          style={{ height: 500, backgroundColor: "pink" }}
+          style={{ height: 500, backgroundColor: "grey" }}
         ></SectionContent>
       </section>
       <section id="hot-foods">
         <SectionTitle>熱門餐飲</SectionTitle>
         <SectionContent
-          style={{ height: 500, backgroundColor: "pink" }}
+          style={{ height: 500, backgroundColor: "grey" }}
         ></SectionContent>
-      </section>
+      </section> */}
     </div>
   );
 }
